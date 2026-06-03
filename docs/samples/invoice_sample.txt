@@ -1,0 +1,46 @@
+INVOICE
+
+Invoice Number: INV-2024-001
+Invoice Date: January 15, 2024
+Due Date: February 14, 2024
+
+Bill To:
+Acme Corporation
+123 Business Avenue
+New York, NY 10001
+Attn: Accounts Payable
+
+From:
+TechConsult LLC
+456 Maple Street
+San Francisco, CA 94102
+
+DESCRIPTION OF SERVICES
+
+Item 1: Software Architecture Consulting
+  Hours: 40 @ $150.00/hr
+  Subtotal: $6,000.00
+
+Item 2: Code Review and Quality Assurance
+  Hours: 10 @ $120.00/hr
+  Subtotal: $1,200.00
+
+Item 3: Technical Documentation
+  Hours: 8 @ $100.00/hr
+  Subtotal: $800.00
+
+SUMMARY
+
+Subtotal:          $8,000.00
+Tax (8%):          $  640.00
+---------------------------
+Total Amount Due:  $8,640.00
+
+Payment Terms: Net 30
+Payment Method: Wire Transfer or ACH
+Bank: First National Bank
+Account: 123456789
+Routing: 987654321
+
+Please remit payment by the due date. Late payments are subject to a 1.5% monthly finance charge.
+Thank you for your business.

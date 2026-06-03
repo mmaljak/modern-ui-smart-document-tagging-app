@@ -1,0 +1,28 @@
+# Python / virtualenv
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Test / lint / coverage artifacts
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local secrets and logs (never ship to the build context)
+.env
+*.log
+
+# HuggingFace model cache (large; baked at runtime into the volume)
+.cache/
+
+# VCS and CI
+.git/
+.github/
+
+# The frontend has its own build context and Dockerfile
+frontend/

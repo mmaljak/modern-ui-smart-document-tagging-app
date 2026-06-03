@@ -1,0 +1,55 @@
+INFORMATION SECURITY POLICY
+
+Policy Title: Acceptable Use and Data Classification Policy
+Policy ID: ISP-2024-003
+Version: 2.1
+Effective Date: January 1, 2024
+Owner: Chief Information Security Officer
+Review Cycle: Annual
+
+1. PURPOSE
+
+This policy establishes requirements for the acceptable use of Acme Corporation's information systems and the classification of company data to ensure confidentiality, integrity, and availability of corporate information assets.
+
+2. SCOPE
+
+This policy applies to all employees, contractors, consultants, and temporary workers who access Acme Corporation's information systems, networks, or data, regardless of location.
+
+3. DATA CLASSIFICATION
+
+All company data must be classified into one of the following categories:
+
+  3.1 Confidential
+      Includes: trade secrets, financial forecasts, M&A plans, personal employee data, customer PII.
+      Handling: Encrypted at rest and in transit; access restricted to need-to-know basis; cannot be stored on personal devices.
+
+  3.2 Internal
+      Includes: internal procedures, non-public project plans, internal communications.
+      Handling: Not for external distribution; access limited to employees and authorized contractors.
+
+  3.3 Public
+      Includes: marketing materials, published press releases, public website content.
+      Handling: No access restrictions.
+
+4. ACCEPTABLE USE
+
+  4.1 Employees must use company systems solely for business purposes. Incidental personal use is permitted provided it does not interfere with work duties or violate this policy.
+
+  4.2 Employees must not: install unauthorized software; attempt to bypass security controls; share login credentials; access systems they are not authorized to use.
+
+  4.3 All company devices must have full-disk encryption enabled and comply with MDM enrollment requirements.
+
+5. INCIDENT REPORTING
+
+Employees must report suspected security incidents, breaches, or policy violations to security@company.com within 24 hours of discovery. Failure to report a known incident is a policy violation.
+
+6. COMPLIANCE AND ENFORCEMENT
+
+Violation of this policy may result in disciplinary action up to and including termination of employment, and may result in civil or criminal liability. All employees must acknowledge this policy annually.
+
+7. EXCEPTIONS
+
+Exceptions to this policy require written approval from the CISO and must be documented in the Policy Exception Register.
+
+Approved by: Chief Information Security Officer
+Date: December 15, 2023

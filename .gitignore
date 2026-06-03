@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+# HuggingFace model cache (1.6 GB — never commit)
+.cache/

@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Scrape the document-tagging API's /metrics endpoint. "api" resolves via the
+  # docker-compose network; the API listens on 8000 inside the network.
+  - job_name: document-tagger-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["api:8000"]

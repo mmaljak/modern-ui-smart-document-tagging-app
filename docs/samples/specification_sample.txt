@@ -1,0 +1,74 @@
+TECHNICAL SPECIFICATION
+
+Document Title: Smart Document Tagging API — System Requirements Specification
+Version: 1.0
+Status: Draft
+Date: 2024-03-01
+
+1. INTRODUCTION
+
+1.1 Purpose
+This document specifies the functional and non-functional requirements for the Smart Document Tagging API system.
+
+1.2 Scope
+The system shall accept document uploads (PDF, DOCX, TXT), extract text, classify documents into predefined taxonomy categories, and return confidence-scored tags via a RESTful API.
+
+2. FUNCTIONAL REQUIREMENTS
+
+FR-001: Document Upload
+  The system shall accept multipart/form-data POST requests containing a single document file.
+  Supported formats shall include: PDF, DOCX, plain text.
+
+FR-002: Text Extraction
+  The system shall extract plain text from all supported document formats.
+  The system shall handle multi-page PDF documents.
+  The system shall handle corrupted documents by returning HTTP 422.
+
+FR-003: Classification
+  The system shall classify extracted text against a predefined taxonomy of 8 categories.
+  The system shall support multi-label classification (multiple tags per document).
+  The system shall return confidence scores between 0.0 and 1.0 for each tag.
+
+FR-004: Key Sentence Extraction
+  The system shall identify and return the top 3 most category-relevant sentences.
+
+3. NON-FUNCTIONAL REQUIREMENTS
+
+NFR-001: Performance
+  The API shall respond to classification requests within 2 seconds at p95 for documents under 10 KB.
+  The API shall support 100 concurrent requests without degradation.
+
+NFR-002: Availability
+  The system shall maintain 99.9% uptime in production.
+  Health check endpoint (/health) shall respond within 200ms.
+
+NFR-003: Security
+  The API shall enforce rate limiting of 5 requests per minute per IP address.
+  The system shall validate file type via MIME detection, not file extension alone.
+  Maximum file size shall be 10 MB.
+
+NFR-004: Scalability
+  The system shall be containerized and deployable via Docker Compose.
+  The architecture shall support horizontal scaling by adding API container replicas.
+
+4. SYSTEM ARCHITECTURE
+
+4.1 Components
+  - FastAPI REST API server
+  - BART zero-shot classification model (facebook/bart-large-mnli)
+  - Text extraction layer (pdfplumber, python-docx)
+  - Streamlit web interface
+
+4.2 Interface Specifications
+  POST /api/v1/tag
+    Request: multipart/form-data, field "file"
+    Response: application/json, schema TagResponse
+
+5. CONSTRAINTS
+  - Python >= 3.11
+  - Model inference must operate on CPU (no GPU dependency)
+  - Docker image size shall not exceed 5 GB
+
+6. ACCEPTANCE CRITERIA
+  All functional requirements shall be verified by automated integration tests.
+  Test coverage shall be >= 80% for the src/ package.

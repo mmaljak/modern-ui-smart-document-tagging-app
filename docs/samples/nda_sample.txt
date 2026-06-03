@@ -1,0 +1,46 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement ("Agreement") is entered into as of February 1, 2024 (the "Effective Date"), by and between:
+
+TechConsult LLC, a Delaware LLC ("Party A"), and
+Acme Corporation, a Delaware corporation ("Party B").
+
+(Each individually a "Party" and collectively the "Parties.")
+
+1. PURPOSE
+The Parties wish to explore a potential business relationship (the "Purpose") and, in connection with that Purpose, may disclose to each other certain confidential and proprietary information.
+
+2. DEFINITION OF CONFIDENTIAL INFORMATION
+"Confidential Information" means any non-public information disclosed by one Party (the "Disclosing Party") to the other Party (the "Receiving Party"), either directly or indirectly, in writing, orally, or by inspection of tangible objects, that is designated as "Confidential," "Proprietary," or similar, or that reasonably should be understood to be confidential given the nature of the information and circumstances of disclosure.
+
+Confidential Information includes, without limitation: trade secrets, business plans, financial data, technical specifications, source code, customer lists, and pricing information.
+
+3. OBLIGATIONS OF THE RECEIVING PARTY
+The Receiving Party shall:
+  (a) Hold the Disclosing Party's Confidential Information in strict confidence;
+  (b) Not disclose the Confidential Information to any third party without prior written consent of the Disclosing Party;
+  (c) Use the Confidential Information solely for the Purpose;
+  (d) Protect the Confidential Information with at least the same degree of care it uses to protect its own proprietary information, but in no event less than reasonable care.
+
+4. EXCLUSIONS
+Confidential Information shall not include information that:
+  (a) Is or becomes publicly known through no breach of this Agreement;
+  (b) Was rightfully known to the Receiving Party prior to disclosure;
+  (c) Is received from a third party without restriction;
+  (d) Is independently developed by the Receiving Party without use of the Confidential Information.
+
+5. TERM
+This Agreement shall remain in effect for a period of two (2) years from the Effective Date. The confidentiality obligations shall survive termination of this Agreement for a period of three (3) additional years.
+
+6. RETURN OR DESTRUCTION OF INFORMATION
+Upon written request by the Disclosing Party, the Receiving Party shall promptly return or destroy all Confidential Information and certify in writing that it has done so.
+
+7. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of Delaware.
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the date first written above.
+
+TECHCONSULT LLC                         ACME CORPORATION
+By: _________________________           By: _________________________
+Name: Jane Smith                        Name: John Doe
+Title: Managing Director                Title: Chief Technology Officer

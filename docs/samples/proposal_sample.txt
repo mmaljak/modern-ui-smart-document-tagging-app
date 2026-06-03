@@ -1,0 +1,54 @@
+TECHNICAL PROPOSAL
+
+Proposal Title: Modernization of Legacy Data Pipeline Infrastructure
+Submitted To: Acme Corporation — IT Steering Committee
+Submitted By: TechConsult LLC
+Date: February 20, 2024
+Proposal Reference: TCP-2024-007
+
+EXECUTIVE SUMMARY
+
+TechConsult LLC is pleased to submit this proposal for the modernization of Acme Corporation's legacy batch data pipeline. We propose a phased migration to a cloud-native event-driven architecture that will reduce processing latency by an estimated 85%, improve data reliability, and enable real-time analytics capabilities. Total project investment: $87,500 over 16 weeks.
+
+PROBLEM STATEMENT
+
+Acme's current data pipeline relies on a 2015-era nightly batch ETL process that introduces 18–24 hour data lag, experiences monthly failures requiring manual intervention, and lacks the scalability to support the planned 3x data volume growth in 2025.
+
+PROPOSED SOLUTION
+
+We propose replacing the legacy pipeline with Apache Kafka for event streaming, Apache Spark for distributed transformation, and Delta Lake for ACID-compliant storage. This architecture supports both batch and streaming workloads and is cloud-provider agnostic.
+
+SCOPE OF WORK
+
+Phase 1 — Assessment and Design (Weeks 1–4): $22,000
+  - Current-state architecture review and dependency mapping
+  - Target architecture design and data flow documentation
+  - Proof-of-concept pipeline for 2 representative data sources
+
+Phase 2 — Core Migration (Weeks 5–12): $48,000
+  - Kafka cluster provisioning and configuration
+  - Migration of 8 data sources to streaming ingestion
+  - Spark transformation jobs and unit test suite
+  - Delta Lake schema design and migration scripts
+
+Phase 3 — Cutover and Stabilization (Weeks 13–16): $17,500
+  - Parallel run: legacy and new pipeline for 2 weeks
+  - Performance benchmarking and optimization
+  - Runbook documentation and team knowledge transfer
+  - 90-day post-launch support
+
+DELIVERABLES
+
+- Architecture design document
+- Fully operational streaming pipeline
+- Automated test suite (>90% coverage)
+- Operations runbook
+- 4 knowledge transfer sessions
+
+TIMELINE AND BUDGET SUMMARY
+
+Total Duration: 16 weeks from signed agreement
+Total Investment: $87,500 (fixed fee, inclusive of all labor)
+Payment Schedule: 30% upon signing, 40% at Phase 2 completion, 30% at final acceptance
+
+We are confident this solution will deliver measurable ROI within 18 months. We look forward to discussing this proposal at your convenience.

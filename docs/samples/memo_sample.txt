@@ -1,0 +1,32 @@
+MEMORANDUM
+
+TO:     All Engineering Staff
+FROM:   Sarah Johnson, VP of Engineering
+DATE:   March 15, 2024
+SUBJECT: Updated Remote Work Policy and Equipment Guidelines
+
+This memo is to inform all engineering team members of important updates to our remote work and equipment policies, effective April 1, 2024.
+
+REMOTE WORK SCHEDULE
+
+Effective April 1, 2024, all engineering staff are required to be in the office a minimum of two (2) days per week. Preferred in-office days are Tuesday and Thursday. Exceptions require written approval from your direct manager.
+
+EQUIPMENT POLICY UPDATE
+
+Please note the following action required items:
+
+1. All laptops must be enrolled in the new MDM system by March 31, 2024. Instructions were sent to your company email on March 10. Please contact IT if you have not received them.
+
+2. Personal devices used to access company systems must have full-disk encryption enabled. IT will verify compliance during the quarterly security audit in April.
+
+3. Home office internet expenses are reimbursable up to $75/month with a valid receipt submitted through Concur.
+
+INTERNAL COMMUNICATIONS
+
+Starting April 1, all team-wide announcements will be posted in the #engineering-all Slack channel. Please ensure you have notifications enabled for this channel.
+
+Questions about this policy update should be directed to HR at hr@company.com or your direct manager. This memo supersedes all previous guidance on remote work equipment issued prior to this date.
+
+Please acknowledge receipt of this memo by replying to this email by March 22, 2024.
+
+Thank you for your cooperation.

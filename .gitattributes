@@ -1,0 +1,10 @@
+# Normalize line endings to LF in the repo across platforms.
+* text=auto eol=lf
+
+# Binary / generated lockfiles — leave untouched.
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+bun.lock -text

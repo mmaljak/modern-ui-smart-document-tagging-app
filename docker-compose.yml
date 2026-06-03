@@ -1,0 +1,76 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DEBUG: "false"
+      HF_HOME: /home/app/.cache/huggingface
+      # Browser origins allowed to call the API (comma-separated).
+      CORS_ALLOW_ORIGINS: "http://localhost:3000,http://localhost:5173"
+    volumes:
+      - hf_cache:/home/app/.cache/huggingface
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/v1/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 90s   # BART download can take ~2 min on first boot
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Baked into the client bundle at build time. Point this at the API's
+        # public URL when running on a remote host instead of localhost.
+        VITE_API_BASE_URL: http://localhost:8000/api/v1
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ── Optional observability stack ──────────────────────────────────────────
+  # Gated behind the "monitoring" profile so the default `docker compose up`
+  # stays lean. Start the full stack with:
+  #     docker compose --profile monitoring up
+  prometheus:
+    image: prom/prometheus:v3.1.0
+    profiles: ["monitoring"]
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:11.4.0
+    profiles: ["monitoring"]
+    ports:
+      - "3001:3000"   # 3001 on host to avoid colliding with the UI on :3000
+    environment:
+      # Local-only demo settings — no account needed, dashboards open without login.
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  hf_cache:
+  prometheus_data:
+  grafana_data:

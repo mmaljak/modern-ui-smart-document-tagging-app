@@ -1,0 +1,11 @@
+apiVersion: 1
+
+# Auto-provision the Prometheus datasource so Grafana is usable with no manual
+# setup. "prometheus" resolves via the docker-compose network.
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true

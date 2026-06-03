@@ -1,0 +1,19 @@
+# Dependencies / build output — must NOT overwrite the image's freshly
+# installed linux modules (the Dockerfile copies node_modules then COPY . .)
+node_modules
+dist
+dist-ssr
+.output
+.tanstack
+.nitro
+.vinxi
+.wrangler
+
+# Local secrets and logs
+.env
+.dev.vars
+*.local
+*.log
+
+# VCS
+.git
